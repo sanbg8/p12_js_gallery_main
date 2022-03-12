@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p11_gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'IM Fell English SC', serif;
+            background-color:mediumturquoise;
+            color:yellow;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .container{
+            width: 540px;
+            overflow: auto;
+            margin: 40px auto;
+        }
+        .slider-inner{
+            width: 500px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            float: left;
+            padding: 3px;
+            border: 3px solid yellow;
+        }
+        .slider-inner img{
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+        .slider-inner img.active{
+            display: inline-block;
+        }
+        .prev,.next{
+            position: absolute;
+            color:rgb(255, 217, 0);
+            cursor: pointer;
+            margin-top: 130px;
+            padding: 20px;
+            background-color: rgba(191, 12, 96, 0.55) ;
+            z-index: 100;
+        }
+        .prev{
+            margin-left: -15px;
+        }
+        .next{
+            position: absolute;
+            margin-left: -60px;
+            z-index: 100;
+        }
+    </style>
+<body>
+    <div class="container">
+        <h1>JS Gallery</h1>
+        <div class="slider-outer">
+            <!-- <h2>títol</h2> -->
+            <i class="prev" alt="Prev">prev</i>
+            <div class="slider-inner">
+                <img src="img/img1.jpg" alt="" class="active">
+                <img src="img/img2.jpg" alt="">
+                <img src="img/img3.jpg" alt="">
+                <img src="img/img4.jpg" alt="">
+            </div>
+            <i class="next" alt="Next">next</i>
+        </div>
+    </div>
+</body>
+</html>
